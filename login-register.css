@@ -140,7 +140,7 @@ img.logo {
 .dynmaplogin label input {
     border: none;
     border-bottom: 1px #666666 solid;
-    width: 100%;
+    width: 18.2em;
     font-size: 1.5em;
     transition-property: border-bottom-color;
     transition-duration: 0.2s;
@@ -157,7 +157,7 @@ img.logo {
     font-size:  1em;
     font-weight: bold;
     color: rgb(234, 29, 29);
-    background: #ffffff;
+    background: #ffffff none;
     border: 2px solid rgb(234, 29, 29);
     border-radius: 2em;
     transition-property: color, background-color;
