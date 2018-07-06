@@ -1,0 +1,201 @@
+body {
+    margin: 0;
+    background: #eeeeee;
+}
+
+main.dynmaplogin {
+    font-family: sans-serif;
+    margin: 6em;
+    display: grid;
+    grid-auto-rows: max-content;
+    grid-template-columns: 12em repeat(auto-fill, 24em);
+    grid-gap: 1em;
+    align-content: center;
+    position: relative;
+}
+
+.dynmaplogin .header {
+    grid-row: 1 / span 3;
+}
+
+img.logo {
+    width: 6em;
+    border-radius: 50%;
+}
+
+.dynmaplogin h2 {
+    margin: 1em 0 0;
+    font-size: 1.5em;
+}
+.dynmaplogin h3 {
+     margin: 0.5em 0 2em;
+     font-size: 1em;
+}
+.dynmaplogin h4 {
+    margin: 0;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    border-radius: 1em 1em 0 0;
+    font-size: 1.2em;
+    font-weight: normal;
+}
+.register h4 {
+    background: #eeeeee url('img/cake-iso.png') no-repeat 15.5em -1em / 6em;
+}
+.login h4 {
+    background: #eeeeee url('img/cake-iso-half.png') no-repeat 15.5em -1em / 6em;
+}
+.dynmaplogin p {
+    margin: 0.5em 0 0.5em;
+    font-weight: lighter;
+    color: #666666;
+}
+
+.dynmaplogin a {
+    color: rgb(234, 29, 29);
+}
+
+.dynmaplogin .statusmessage {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.dynmaplogin .statusmessage > div {
+    font-size: 1em;
+    font-weight: normal;
+    padding: 0.5em 1em;
+    border-radius: 2em;
+    background-color: rgb(234, 29, 29);
+    color: #ffffff;
+    transition-property: background-color, width;
+    transition-duration: 0.2ms;
+}
+
+.dynmaplogin .register {
+    grid-column-start: 2;
+}
+.dynmaplogin .login {
+}
+
+.dynmaplogin .block {
+    padding-bottom: 1em;
+    border-radius: 1.2em;
+    position: relative;
+    box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19);
+    background: #ffffff;
+    transition-property: box-shadow;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-out;
+}
+.dynmaplogin .block:hover, .dynmaplogin .block:focus, .dynmaplogin .block:active {
+    box-shadow: 0 8pt 14pt 0 rgba(0,0,0,0.3), 0 8pt 24pt 0 rgba(0,0,0,0.29);
+}
+.dynmaplogin .block > * {
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.dynmaplogin .icon {
+    display: block;
+    margin: 0 auto;
+    width: 4em;
+}
+
+.dynmaplogin .number {
+    display: inline-block;
+    font-weight: bold;
+    height: 1.5em;
+    width: 1.5em;
+    border-radius: 0.5em;
+    text-align: center;
+    background: #666666;
+    color: #ffffff;
+}
+
+.dynmaplogin .code {
+    display: inline-block;
+    font-family: Consolas, monospace;
+    background: #dddddd;
+    height: 1.2em;
+    color: #000000;
+    padding: 0 0.5em;
+    border-radius: 1em;
+}
+
+.dynmaplogin form {
+    padding-top: 0.5em;
+    height: 100%;
+}
+.dynmaplogin label {
+    display: block;
+    font-weight: lighter;
+    margin-top: 0.5em;
+    font-size: 0.8em;
+    color: #666666;
+    transition-property: font-weight;
+    transition-duration: 0.2s;
+}
+.dynmaplogin label:hover, .dynmaplogin label:focus {
+    font-weight: bold;
+}
+.dynmaplogin label input {
+    border: none;
+    border-bottom: 1px #666666 solid;
+    width: 100%;
+    font-size: 1.5em;
+    transition-property: border-bottom-color;
+    transition-duration: 0.2s;
+}
+.dynmaplogin label:hover input, .dynmaplogin label input:focus {
+    border-bottom-color: rgb(234, 29, 29);
+}
+
+.dynmaplogin form input.button {
+    width: 22em;
+    height: 2em;
+    position: absolute;
+    bottom: 1em;
+    font-size:  1em;
+    font-weight: bold;
+    color: rgb(234, 29, 29);
+    background: #ffffff;
+    border: 2px solid rgb(234, 29, 29);
+    border-radius: 2em;
+    transition-property: color, background-color;
+    transition-duration: 0.2s;
+}
+.dynmaplogin form input.button:hover, .dynmaplogin form input.button:focus {
+    color: #ffffff;
+    background: rgb(234, 29, 29);
+}
+
+.sweep-right {
+    display: inline-block;
+    padding: 0.2em 0;
+    transform: perspective(1px) translateZ(0);
+    transition-property: color, padding;
+    transition-duration: 0.2s;
+}
+.sweep-right:before {
+    background: rgb(234, 29, 29);
+    border-radius: 2em;
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    transition-property: transform;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-out;
+}
+
+.sweep-right:hover, .sweep-right:focus, .sweep-right:active {
+    padding: 0.2em 0.8em;
+    color: #ffffff !important;
+}
+.sweep-right:hover:before, .sweep-right:focus:before, .sweep-right:active:before {
+    transform: scaleX(1);
+}
