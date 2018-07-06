@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh" class="gr__map_qiegaoshijie_club">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Pragma" content="no-cache">
+    <title> Minecraft Dynamic Map - Login/Register </title>
+    <link rel="icon" href="http://map.qiegaoshijie.club/images/dynmap.ico" type="image/ico">
+
+    <!-- Custom styling for login/register panel -->
+    <link rel="stylesheet" type="text/css" href="login-register.css" media="screen">
+
+</head>
+
+<body data-gr-c-s-loaded="true" cz-shortcut-listen="true">
+<main class="dynmaplogin">
+    <header class="header">
+        <img class="logo" src="img/qiegao.jpg" alt="切糕世界 Logo">
+        <h2>切糕世界</h2>
+        <h3>糕分一号卫星网</h3>
+        <p>Minecraft Dynamic Map</p>
+        <p><a class="sweep-right" href="http://map.qiegaoshijie.club">Qiegao World</a></p>
+    </header>
+    <div id="status_message" class="statusmessage">
+        <div>注册失败: 验证码错误</div>
+    </div>
+
+    <div class="register block">
+        <h4>新糕 <b>注册</b></h4>
+        <form method="POST" name="register" action="http://map.qiegaoshijie.club/up/register">
+            <p><span class="number">1</span> 获取验证码</p>
+            <p>进入游戏并输入代码 <span class="code">/dynmap webregister</span> 以获取与用户名匹配的验证码</p>
+            <label>验证码 (格式: XXXX-XXXX)<br> <input type="text" size="20" name="j_passcode"></label>
+            <br>
+            <p><span class="number">2</span> 完成注册</p>
+            <p>Web端用户名须与游戏中一致 密码可与游戏中不同 并不存在忘记密码找回功能 所以请记牢密码</p>
+            <label>用户名 (英文ID)<br> <input type="text" size="20" name="j_username"></label>
+            <label>设置密码 (可与游戏密码不同)<br> <input type="password" size="20" name="j_password"></label>
+            <label>确认密码<br> <input type="password" size="20" name="j_verify_password"></label>
+            <br><br>
+            <input class="button" type="submit" name="register" value="注册 Register">
+        </form>
+    </div>
+
+    <div class="login block">
+        <h4>老糕 <b>登入</b></h4>
+        <form method="POST" name="login" action="http://map.qiegaoshijie.club/up/login">
+            <label>用户名<br> <input type="text" size="20" name="j_username"></label>
+            <label>密码<br><input type="password" size="20" name="j_password"></label>
+            <br><br>
+            <input class="button" type="submit" name="login" value="登入 Login">
+        </form>
+    </div>
+
+</main>
+
+</body>
+</html>
